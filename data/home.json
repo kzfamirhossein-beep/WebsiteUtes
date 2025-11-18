@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "h1": "UTES — Redefining Modern Menswear",
+    "h1Fa": "اوتس — بازتعریف پوشاک مدرن مردانه",
+    "p": "At UTES, we stay true to simplicity, precision, and quality. Each design reflects modern minimalism and timeless sophistication — made for the man who leaves an impression without seeking attention. Our collections are crafted with premium fabrics and meticulous tailoring, balancing comfort with elegance.",
+    "pFa": "در اوتس به سادگی، دقت و کیفیت پایبندیم. هر طراحی بازتابی از مینیمالیسم مدرن و وقار ماندگار است — برای مردی که بدون جلب توجه، تاثیر می‌گذارد. کالکشن‌های ما با پارچه‌های ممتاز و دوخت دقیق ساخته می‌شوند تا تعادلی میان راحتی و زیبایی برقرار کنند."
+  },
+  "about": {
+    "title": "UTES: The Essence of Modern Luxury",
+    "titleFa": "اوتس: جوهره لوکس مدرن",
+    "body": "UTES was founded with a vision to redefine what modern menswear means. We believe true luxury lies in simplicity — in clean cuts, timeless colors, and quality that endures. Every piece is designed and crafted with precision, from material selection to stitching, offering more than just clothing — an experience of confidence, refinement, and identity.",
+    "bodyFa": "اوتس با چشم‌اندازی برای بازتعریف معنای پوشاک مدرن مردانه تأسیس شد. ما باور داریم لوکس واقعی در سادگی نهفته است — در برش‌های تمیز، رنگ‌های ماندگار و کیفیتی که دوام می‌آورد. هر قطعه با دقت، از انتخاب متریال تا دوخت، طراحی و تولید می‌شود تا چیزی فراتر از لباس ارائه دهد — تجربه‌ای از اعتمادبه‌نفس، ظرافت و هویت."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "titleFa": "ماموریت ما",
+    "body": "In a world where trends change overnight, UTES remains committed to timeless style and lasting value. Rather than following fashion cycles, we focus on creating pieces that stay elegant through time. Our philosophy is simple: Less noise. More presence.",
+    "bodyFa": "در دنیایی که ترندها یک‌شبه تغییر می‌کنند، اوتس متعهد به سبکی ماندگار و ارزشی پایدار است. به‌جای پیروی از چرخه‌های مد، بر خلق قطعاتی تمرکز می‌کنیم که در گذر زمان شیک و باوقار بمانند. فلسفه ما ساده است: سر و صدای کمتر. حضور بیشتر."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "titleFa": "چشم‌انداز ما",
+    "body": "Shaping the Future of Modern Elegance — Our vision is to establish UTES as a symbol of understated luxury, where modern design meets timeless craftsmanship. We aspire to build a global community of men who value authenticity, presence, and quiet confidence over fleeting trends. Through thoughtful design and ethical creation, UTES aims to become not just a clothing brand, but a movement that inspires a refined way of living — minimal, conscious, and enduring.",
+    "bodyFa": "شکل‌دهی به آینده‌ای از وقار مدرن — چشم‌انداز ما تبدیل کردن اوتس به نمادی از لوکس مینیمال است؛ جایی که طراحی مدرن با هنر ماندگار تلفیق می‌شود. ما به‌دنبال ساختن جامعه‌ای جهانی از مردانی هستیم که اصالت، حضور و اعتمادبه‌نفس آرام را به ترندهای گذرا ترجیح می‌دهند. با طراحی متفکرانه و تولید اخلاق‌مدار، اوتس می‌کوشد صرفاً یک برند پوشاک نباشد، بلکه جنبشی الهام‌بخش برای سبک زندگی‌ای پالوده، آگاهانه و ماندگار باشد."
+  }
+}
+

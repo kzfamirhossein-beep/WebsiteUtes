@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global tweaks */
+:root {
+  --background: #1f1f1f;
+  --foreground: #f5f5f5;
+  /* brand as space-separated r g b for Tailwind rgb(var(--brand) / <alpha-value>) */
+  --brand: 160 124 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Luxury typography enhancements */
+body {
+  font-feature-settings: "kern" 1, "liga" 1;
+  letter-spacing: 0.01em;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+input,
+textarea,
+select,
+button,
+label,
+[contenteditable="true"] {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Classic 3D button effect */
+@layer components {
+  .btn-3d {
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-3d:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.4), 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-3d:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Custom Scrollbar - Elegant and Minimal */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-left: 1px solid rgba(160, 124, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(160, 124, 0, 0.6) 0%, rgba(160, 124, 0, 0.4) 100%);
+  border-radius: 5px;
+  border: 2px solid #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(160, 124, 0, 0.8) 0%, rgba(160, 124, 0, 0.6) 100%);
+  border-color: rgba(160, 124, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, rgba(160, 124, 0, 0.9) 0%, rgba(160, 124, 0, 0.7) 100%);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(160, 124, 0, 0.6) #1a1a1a;
+}
+
+/* Product Scroll Container - Custom Horizontal Scrollbar */
+.product-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(160, 124, 0, 0.8) #1a1a1a;
+}
+
+.product-scroll-container::-webkit-scrollbar {
+  height: 12px;
+}
+
+.product-scroll-container::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 6px;
+  border: 1px solid rgba(160, 124, 0, 0.1);
+}
+
+.product-scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(160, 124, 0, 0.8) 0%, rgba(160, 124, 0, 0.6) 100%);
+  border-radius: 6px;
+  border: 2px solid #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.product-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, rgba(160, 124, 0, 0.9) 0%, rgba(160, 124, 0, 0.7) 100%);
+  border-color: rgba(160, 124, 0, 0.3);
+}
+
+.product-scroll-container::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(90deg, rgba(160, 124, 0, 1) 0%, rgba(160, 124, 0, 0.8) 100%);
+}
+
+/* Product Carousel Slide Animations */
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-out-left {
+  animation: slide-out-left 0.3s ease-in-out forwards;
+}
+
+.animate-slide-out-right {
+  animation: slide-out-right 0.3s ease-in-out forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-in-out forwards;
+}
+
+
