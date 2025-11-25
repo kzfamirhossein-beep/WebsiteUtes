@@ -13,6 +13,9 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# Ensure public directory exists (in case it's empty in git)
+RUN mkdir -p /app/public
+
 # Set build-time environment variable
 ENV NEXT_TELEMETRY_DISABLED 1
 
@@ -30,6 +33,8 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 # Copy necessary files from builder
+# Ensure public directory exists, then copy if it has content
+RUN mkdir -p /app/public
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
