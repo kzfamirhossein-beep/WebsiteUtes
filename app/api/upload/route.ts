@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile } from 'fs/promises';
 import path from 'path';
 import fs from 'fs';
 
@@ -13,7 +12,7 @@ export async function POST(request: NextRequest) {
     }
 
     const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
+    const buffer = new Uint8Array(bytes);
 
     // Create uploads directory if it doesn't exist
     const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
@@ -25,7 +24,7 @@ export async function POST(request: NextRequest) {
     const filename = `${Date.now()}-${file.name}`;
     const filepath = path.join(uploadsDir, filename);
 
-    await writeFile(filepath, buffer);
+    fs.writeFileSync(filepath, buffer);
     
     return NextResponse.json({ 
       success: true, 

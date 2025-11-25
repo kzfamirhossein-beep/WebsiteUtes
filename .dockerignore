@@ -13,7 +13,10 @@ yarn-error.log*
 .DS_Store
 *.pem
 public/uploads
-public/1103.mp4
-public/IMG_E0943.JPG
-public/UTES_logo_8192_transparent.png
+# Note: Large media files (video and background image) are excluded
+# Consider using CDN or external storage for these in production
+# public/1103.mp4
+# public/IMG_E0943.JPG
+# Logo is included as it's essential for the site
+# public/UTES_logo_8192_transparent.png
 
