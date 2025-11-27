@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: utes-website
+  labels:
+    app: utes-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: utes-website
+  template:
+    metadata:
+      labels:
+        app: utes-website
+    spec:
+      imagePullSecrets:
+      - name: ghcr-secret
+      containers:
+      - name: website
+        image: ghcr.io/kzfamirhossein-beep/utes-website:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+          name: http
+        env:
+        - name: NODE_ENV
+          value: "production"
+        - name: PORT
+          value: "3000"
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        volumeMounts:
+        - name: data
+          mountPath: /app/data
+        - name: uploads
+          mountPath: /app/public/uploads
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: utes-data-pvc
+      - name: uploads
+        persistentVolumeClaim:
+          claimName: utes-uploads-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: utes-website-service
+spec:
+  selector:
+    app: utes-website
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: LoadBalancer
+

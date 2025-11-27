@@ -1,3 +1,4 @@
 # This file ensures the public directory is tracked in git
 # Even if it's empty, Docker needs the directory structure
 
+
